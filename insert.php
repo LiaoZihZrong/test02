@@ -1,38 +1,26 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
-<title>資料結果-新增</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>無標題文件</title>
 </head>
 
-<body><?php
-$conn = mysqli_connect("localhost","root","0975775056","test") or die("Could not connect: " . mysqli_error());
-mysqli_query($conn,"SET NAMES 'UTF8' ");
-
+<body><?php   
  $dbhost = 'localhost';   
  $dbuser = 'root';   
  $dbpass = '0975775056';   
  $dbname = 'test';
 
- $number = $_REQUEST['number'];
- $name =   $_REQUEST['name'];
+ $number =$_REQUEST['number'];
+ $name = $_REQUEST['name'];
  $junior = $_REQUEST['junior'];
- $wish =   $_REQUEST['wish'];
+ $wish = $_REQUEST['wish'];
  
-
-  $sql_insert = "INSERT INTO book   (number,name,junior,wish) VALUES ('$number','$name','$junior','$wish')";
+ $conn = mysqli_connect("localhost","root","0975775056","test") or die("Could not connect: " . mysqli_error());
+  $sql_insert = "INSERT INTO book(number, name, junior, wish) VALUES ('$number','$name','$junior','$wish')";
   $result = mysqli_query($conn,$sql_insert);
-
-
-
-    echo $_REQUEST['number']."<br>";
-    echo $_REQUEST['name']."<br>";
-    echo $_REQUEST['junior']."<br>";
-    echo $_REQUEST['wish']."<br>";
-    echo "-----------------------<br>";
-
-
-
+  
+  
   $sql_query = "select * from book";
   $result = mysqli_query($conn,$sql_query)  ;
   if (!$result) {

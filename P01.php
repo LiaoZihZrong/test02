@@ -14,15 +14,9 @@
  國中：<Input Type="text" Name="junior"><p>
  志願：<Input Type="text" Name="wish"><p>
  
- <input  value="新增" type="submit" onclick="form1.action='insert.php';"form1.submit();"/>
- <input  value="修改" type="submit" onclick="form1.action='update.php';form1.submit();"/>
- <input  value="刪除" type="submit" onclick="form1.action='delete.php';form1.submit();"/> 
- 
- 
- 
-
-
-
+ <input type="button" value="新增" type="submit" onclick="form1.action='insert.php';form1.submit();"/>
+    <input type="button" value="修改" type="submit" onclick="form1.action='update.php';form1.submit();"/>
+ <input type="button" value="刪除" type="submit" onclick="form1.action='delete.php';form1.submit();"/>
 
 </form>
 
